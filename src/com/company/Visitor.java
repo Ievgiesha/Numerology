@@ -7,6 +7,22 @@ public class Visitor {
     private int year;
     private int destinyNumber;
 
+    public Visitor() {
+    }
+
+    public Visitor(String name, int destinyNumber) {
+        this.name = name;
+        this.destinyNumber = destinyNumber;
+    }
+
+    public Visitor(String name, int day, int month, int year, int destinyNumber) {
+        this.name = name;
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.destinyNumber = destinyNumber;
+    }
+
     public int whatDestinyNumber(int day, int month, int year) {
         int temp = year;
         int sum = 0;
@@ -35,8 +51,33 @@ public class Visitor {
 
         }
 
-        public static void main (String[]args){
-            Visitor visitor = new Visitor();
-            System.out.println(visitor.whatDestinyNumber(28, 8, 1973));
-        }
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void setDestinyNumber(int destinyNumber) {
+        this.destinyNumber = destinyNumber;
+    }
+
+
+
+    public String getName() {
+        return name;
+    }
+
+    public int getDestinyNumber() {
+        return destinyNumber;
+    }
+}
